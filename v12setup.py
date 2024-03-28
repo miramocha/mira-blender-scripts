@@ -24,14 +24,14 @@ vrmTitlePrefix = 'Mira Luna V12'
 for mat in bpy.data.materials:
     mat.vrm_addon_extension.mtoon1.extensions.vrmc_materials_mtoon.parametric_rim_color_factor = rimColor
     mat.vrm_addon_extension.mtoon1.extensions.vrmc_materials_mtoon.outline_color_factor = outlineColor
-    mat.vrm_addon_extension.mtoon1.extensions.vrmc_materials_mtoon.rim_lighting_mix_factor = rimLightingMix
-    mat.vrm_addon_extension.mtoon1.extensions.vrmc_materials_mtoon.parametric_rim_fresnel_power_factor = 50
+#    mat.vrm_addon_extension.mtoon1.extensions.vrmc_materials_mtoon.rim_lighting_mix_factor = rimLightingMix
+#    mat.vrm_addon_extension.mtoon1.extensions.vrmc_materials_mtoon.parametric_rim_fresnel_power_factor = 50
     mat.vrm_addon_extension.mtoon1.extensions.vrmc_materials_mtoon.shading_shift_factor = 1
     mat.vrm_addon_extension.mtoon1.extensions.vrmc_materials_mtoon.gi_equalization_factor = 0.8
     mat.vrm_addon_extension.mtoon1.extensions.vrmc_materials_mtoon.shading_toony_factor = 0.95
         
     if mat.vrm_addon_extension.mtoon1.alpha_mode != 'BLEND':
-        mat.vrm_addon_extension.mtoon1.extensions.vrmc_materials_mtoon.outline_width_mode = 'worldCoordinates'
+#        mat.vrm_addon_extension.mtoon1.extensions.vrmc_materials_mtoon.outline_width_mode = 'worldCoordinates'
         mat.vrm_addon_extension.mtoon1.extensions.vrmc_materials_mtoon.outline_width_factor = outlineWidth
     if mat.vrm_addon_extension.mtoon1.emissive_texture.index.source == bpy.data.images["Shader_NoneBlack"]:
         mat.vrm_addon_extension.mtoon1.emissive_texture.index.source = bpy.data.images["v12_white_px.png"]
@@ -50,7 +50,7 @@ for mat in bpy.data.materials:
 bpy.data.armatures["Armature"].vrm_addon_extension.vrm0.meta.title = vrmTitlePrefix + '_' + datetime.now().strftime('%y%m%d%H%M%S')
 bpy.data.armatures["Armature"].vrm_addon_extension.vrm0.meta.version = datetime.now().strftime('%m%d%y_%H%M%S')
 
-filename = 'V12_' + datetime.now().strftime('%m%d%y') + '.vrm'
+filename = 'Mira V12_' + datetime.now().strftime('%m%d%y') + '.vrm'
 primaryFilePath = 'D:\\art\\v12_model\\export\\' + filename
 secondaryFilePath = 'C:\\Program Files (x86)\\Steam\\steamapps\\common\\Warudo\\Warudo_Data\\StreamingAssets\\Characters\\' + filename
 
